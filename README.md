@@ -21,13 +21,13 @@ Step4:vi zoo.cfg,修改
 * Step1:配置 JAVA 环境。检验方法:执行 java –version 和 javac –version 命令。
 * Step2:下载并解压 zookeeper。 链接:http://mirror.bjtu.edu.cn/apache/zookeeper/zookeeper-3.4.3/,(更多版本:http://dwz.cn/37HGI)
 
-最终生成目录类似结构:<font color=#DC143C>/home/admin/taokeeper/zookeeper-3.4.3/bin </font>
-1. Step3:重命名 zoo_sample.cfg 文件
-2. Step4:vi zoo.cfg,修改
-3. 这里要注意下 server.1 这个后缀,表示的是 1.2.3.4 这个机器,在机器中的 server id 是 1
-4. Step5:创建数据目录:mkdir /home/admin/taokeeper/zookeeper-3.4.3/data Step6:在标识 Server ID.
-5. 在/home/admin/taokeeper/zookeeper-3.4.3/data 目录中创建文件 myid 文件,每个文件中分别写入当前机器的 server id,例如 1.2.3.4 这个机器,在 /home/admin/taokeeper/zookeeper-3.4.3/data 目录的 myid 文件中写入数字 1.
-6. Step7:启动 zookeeper:执行 Step8:检测是否成功启动:执行
+** 最终生成目录类似结构:<font color=#DC143C>/home/admin/taokeeper/zookeeper-3.4.3/bin </font>
+ Step3:重命名 zoo_sample.cfg 文件
+Step4:vi zoo.cfg,修改
+ 这里要注意下 server.1 这个后缀,表示的是 1.2.3.4 这个机器,在机器中的 server id 是 1
+Step5:创建数据目录:mkdir /home/admin/taokeeper/zookeeper-3.4.3/data Step6:在标识 Server ID.
+在/home/admin/taokeeper/zookeeper-3.4.3/data 目录中创建文件 myid 文件,每个文件中分别写入当前机器的 server id,例如 1.2.3.4 这个机器,在 /home/admin/taokeeper/zookeeper-3.4.3/data 目录的 myid 文件中写入数字 1.
+** Step7:启动 zookeeper:执行 Step8:检测是否成功启动:执行
   
 <font color=#DC143C> mv /home/admin/taokeeper/zookeeper-3.4.3/conf/zoo_sample.cfg zoo.cfg
 dataDir=/home/admin/taokeeper/zookeeper-3.4.3/data server.1=1.2.3.4:2888:3888 server.2=1.2.3.5:2888:3888 server.3=1.2.3.6:2888:3888
